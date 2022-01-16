@@ -15,7 +15,20 @@ const NavStyles = styled.nav`
     list-style-type: none;
     text-align: right;
     li + li {
-      padding: 0 15px;
+      margin: 0 15px;
+    }
+    li {
+      position: relative;
+      :last-of-type:after {
+        content: ' ';
+        position: absolute;
+        background: var(--gradient-light-red);
+        height: 4px;
+        width: 102%;
+        right: 0;
+        bottom: 1px;
+        z-index: -1;
+      }
     }
   }
 `;
@@ -51,7 +64,7 @@ const LogoStyles = styled.div`
     div:first-of-type {
       background: var(--gradient-red);
       color: white;
-      border: none;
+      /* border: none; */
     }
     div:last-of-type {
       top: 0px;

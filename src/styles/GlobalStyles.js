@@ -7,8 +7,35 @@ const GlobalStyles = createGlobalStyle`
     --font-header: 'Now', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
     --black: #251A33;
     --lighter-black: rgba(37, 26, 51, 0.8);
-    --gradient-red: linear-gradient(90deg, #611dae 0%, #ea817a 92.19%);
-    --gradient-light-red: linear-gradient(90deg, rgba(97, 29, 174, 0.6) 0%, rgba(234, 129, 122, 0.6) 92.19%);
+    --gradient-red: linear-gradient(
+      90deg,
+      hsl(268deg 71% 40%) 0%,
+      hsl(286deg 76% 37%) 21%,
+      hsl(301deg 76% 35%) 30%,
+      hsl(313deg 71% 41%) 39%,
+      hsl(323deg 63% 47%) 46%,
+      hsl(331deg 61% 53%) 54%,
+      hsl(340deg 65% 58%) 61%,
+      hsl(348deg 69% 63%) 69%,
+      hsl(356deg 71% 67%) 79%,
+      hsl(4deg 73% 70%) 100%
+    );
+    ${
+      '' /* --gradient-light-red: linear-gradient(90deg, rgba(97, 29, 174, 0.6) 0%, rgba(234, 129, 122, 0.6) 92.19%); */
+    }
+    --gradient-light-red: linear-gradient(
+      90deg,
+      hsl(268deg 47% 64%) 0%,
+      hsl(285deg 42% 63%) 21%,
+      hsl(302deg 37% 63%) 30%,
+      hsl(316deg 46% 67%) 39%,
+      hsl(326deg 54% 70%) 46%,
+      hsl(335deg 60% 73%) 54%,
+      hsl(343deg 65% 76%) 61%,
+      hsl(350deg 69% 78%) 69%,
+      hsl(357deg 71% 80%) 79%,
+      hsl(4deg 72% 82%) 100%
+    );
   }
 
   @font-face {

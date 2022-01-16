@@ -21,10 +21,10 @@ const HeroStyles = styled.section`
         content: ' ';
         position: absolute;
         background: var(--gradient-light-red);
-        height: 7px;
+        height: 8px;
         width: 101%;
         right: 0;
-        bottom: 19px;
+        bottom: 18px;
         z-index: -1;
       }
     }
@@ -53,8 +53,6 @@ export default function Hero() {
   return (
     <HeroStyles>
       <h1>
-        Welcome, I’m
-        <br />
         <span>Alex Dring.</span>
         <br />
         Full-stack web developer.
