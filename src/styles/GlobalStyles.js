@@ -5,8 +5,8 @@ import bodyFont from '../assets/fonts/GeneralSans-Regular.otf';
 const GlobalStyles = createGlobalStyle`
   :root {
     --font-header: 'Now', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-    --black: #251A33;
-    --lighter-black: rgba(37, 26, 51, 0.8);
+    --black: #003752;
+    --lighter-black: #335F75;
     --gradient-red: linear-gradient(
       90deg,
       hsl(268deg 71% 40%) 0%,
@@ -54,7 +54,7 @@ const GlobalStyles = createGlobalStyle`
 
   *, *:before, *:after {
   box-sizing: border-box;
-}
+  }
 
   html {
     font-family: 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -62,7 +62,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 100%;
   }
 
-  h1, h2, h3, h4, h5,h6 {
+  h1, h2, h3, h4, h5, h6 {
     margin: 0 0;
     font-family: var(--font-header);
     font-family: 
@@ -72,6 +72,15 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     line-height: 150%;
   }
+
+  section {
+    margin: auto;
+  }
+
+  ul {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
   
   button {
     font-family: var(--font-header);
@@ -80,6 +89,7 @@ const GlobalStyles = createGlobalStyle`
     background: white;
     border: 2px solid var(--black);
     padding: 10px 46px 12px;
+    color: var(--black);
   }
  `;
 
