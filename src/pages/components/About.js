@@ -1,7 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
+import url from '../../assets/images/bullet.svg';
 
+console.log(url);
 const AboutStyles = styled.section`
   max-width: 700px;
   > div {
@@ -30,15 +32,27 @@ const AboutStyles = styled.section`
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* list-style: none; */
+    list-style: none;
+    li {
+      position: relative;
+      ::before {
+        position: absolute;
+        content: '';
+        background: url(${url}) no-repeat;
+        left: -15px;
+        top: 12px;
+        width: 5px;
+        height: 5px;
+      }
+    }
   }
   .image-wrap {
     position: relative;
     height: 250px;
     width: 250px;
-
+    z-index: 1;
     ::after {
-      content: ' ';
+      content: '';
       position: absolute;
       background: var(--gradient-red);
       height: 250px;
