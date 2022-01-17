@@ -2,11 +2,15 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 const NavStyles = styled.nav`
-  display: flex;
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
   margin: auto;
-  align-items: center;
   height: 70px;
   max-width: 1000px;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   ul {
     font-family: var(--font-header);
@@ -14,11 +18,11 @@ const NavStyles = styled.nav`
     flex-direction: row;
     list-style-type: none;
     text-align: right;
-    li + li {
-      margin: 0 15px;
-    }
     li {
       position: relative;
+      :not(:last-child) {
+        margin-right: 30px;
+      }
       :last-of-type:after {
         content: ' ';
         position: absolute;
@@ -40,7 +44,7 @@ const LogoStyles = styled.div`
     height: 50px;
     font-size: 1.125rem;
     letter-spacing: 1px;
-    transition: all 0.2s ease-in-out;
+    transition: background 0.3s, all 0.3s ease-out;
   }
   div:first-of-type {
     display: flex;
@@ -62,8 +66,8 @@ const LogoStyles = styled.div`
   }
   :hover {
     div:first-of-type {
-      background: var(--gradient-red);
-      color: white;
+      background: var(--gradient-light-red);
+      /* color: white; */
       /* border: none; */
     }
     div:last-of-type {

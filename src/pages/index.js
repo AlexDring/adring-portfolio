@@ -8,6 +8,7 @@ import Hero from './components/Hero';
 
 const MainStyles = styled.main`
   max-width: 1600px;
+  margin: auto;
 `;
 
 export default function HomePage() {

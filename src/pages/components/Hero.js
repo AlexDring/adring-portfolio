@@ -7,6 +7,7 @@ const HeroStyles = styled.section`
   align-items: flex-start;
   justify-content: center;
   max-width: 1000px;
+  padding: 100px;
   height: 100vh;
   margin: 0 auto;
   h1 {
