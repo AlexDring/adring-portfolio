@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import About from './components/About';
+import Work from './components/Work';
 
 const MainStyles = styled.main`
   max-width: 1600px;
@@ -20,6 +21,7 @@ export default function HomePage() {
       <MainStyles>
         <Hero />
         <About />
+        <Work />
       </MainStyles>
       <Footer />
     </>

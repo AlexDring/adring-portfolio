@@ -32,7 +32,6 @@ const AboutStyles = styled.section`
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    list-style: none;
     li {
       position: relative;
       ::before {

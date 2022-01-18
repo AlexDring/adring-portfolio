@@ -20,9 +20,6 @@ const GlobalStyles = createGlobalStyle`
       hsl(356deg 71% 67%) 79%,
       hsl(4deg 73% 70%) 100%
     );
-    ${
-      '' /* --gradient-light-red: linear-gradient(90deg, rgba(97, 29, 174, 0.6) 0%, rgba(234, 129, 122, 0.6) 92.19%); */
-    }
     --gradient-light-red: linear-gradient(
       90deg,
       hsl(268deg 47% 64%) 0%,
@@ -35,6 +32,32 @@ const GlobalStyles = createGlobalStyle`
       hsl(350deg 69% 78%) 69%,
       hsl(357deg 71% 80%) 79%,
       hsl(4deg 72% 82%) 100%
+    );
+    --gradient-blue: linear-gradient(
+      90deg,
+      hsl(268deg 71% 40%) 0%,
+      hsl(260deg 54% 48%) 11%,
+      hsl(252deg 52% 54%) 22%,
+      hsl(245deg 56% 60%) 33%,
+      hsl(239deg 60% 65%) 44%,
+      hsl(234deg 67% 69%) 56%,
+      hsl(230deg 74% 73%) 67%,
+      hsl(226deg 81% 76%) 78%,
+      hsl(224deg 89% 81%) 89%,
+      hsl(221deg 100% 85%) 100%
+    );
+    --gradient-light-blue: linear-gradient(
+      90deg,
+      hsl(247deg 47% 78%) 0%,
+      hsl(243deg 49% 80%) 21%,
+      hsl(238deg 52% 82%) 30%,
+      hsl(235deg 56% 83%) 39%,
+      hsl(232deg 61% 85%) 46%,
+      hsl(229deg 66% 87%) 54%,
+      hsl(226deg 71% 88%) 61%,
+      hsl(224deg 78% 90%) 69%,
+      hsl(222deg 87% 92%) 79%,
+      hsl(220deg 100% 94%) 100%
     );
   }
 
@@ -80,6 +103,7 @@ const GlobalStyles = createGlobalStyle`
   ul {
     font-size: 1.125rem;
     line-height: 1.75rem;
+    list-style: none;
   }
   
   button {
