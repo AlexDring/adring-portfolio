@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import url from '../../assets/images/bullet.svg';
 
-console.log(url);
 const AboutStyles = styled.section`
   max-width: 700px;
   > div {

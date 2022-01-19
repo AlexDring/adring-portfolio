@@ -1,4 +1,5 @@
-import { StaticImage } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import styled from 'styled-components';
 
@@ -24,19 +25,14 @@ const WorkStyles = styled.section`
   > p {
     font-size: 1.375rem;
   }
-  section {
-    margin-top: 60px;
-  }
-  h3 {
-    font-size: 1.375rem;
-  }
 `;
 
 const WorkSectionStyles = styled.section`
-  margin-top: 60px;
+  margin-top: 120px;
   position: relative;
   h3 {
     display: inline-block;
+    font-size: 1.375rem;
   }
   ul {
     display: inline-flex;
@@ -68,8 +64,13 @@ const WorkSectionStyles = styled.section`
       height: 100%;
     }
   }
-  .gatsby-image-wrapper {
-    z-index: -1;
+  .work-image {
+    z-index: -2;
+  }
+  &:nth-of-type(2n) {
+    .work-image {
+      order: 1;
+    }
   }
   .section-background {
     position: absolute;
@@ -87,36 +88,61 @@ const WorkSectionStyles = styled.section`
 `;
 
 export default function Work() {
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: ASC }) {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              skills
+              link
+              github
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    formats: [AUTO, WEBP, AVIF]
+                    placeholder: BLURRED
+                  )
+                }
+              }
+            }
+            html
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <WorkStyles>
       <h2>Things I've made</h2>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <WorkSectionStyles>
-        <h3>MJR Multi-venue Project</h3>
-        <ul>
-          <li>WordPress</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>ACF</li>
-        </ul>
-        <div>
-          <StaticImage
-            src="../../assets/images/mjr-venue.png"
-            alt="Multi venue website example."
-            placeholder="blurred"
-            layout="fixed"
-          />
-          <div className="work-text">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
-              adipisci corporis tenetur ullam quo delectus, aliquam, eos ipsum
-              molestias a dolorum neque quaerat impedit odio quibusdam ipsam
-              consequuntur dignissimos inventore!
-            </p>
-          </div>
-        </div>
-        <div className="section-background" />
-      </WorkSectionStyles>
+      {data.allMarkdownRemark.edges.map((edge) => {
+        const { frontmatter, html } = edge.node;
+        const image = getImage(frontmatter.image);
+        return (
+          <WorkSectionStyles>
+            <h3>{frontmatter.title}</h3>
+            <ul>
+              {frontmatter.skills.map((skill) => (
+                <li>{skill}</li>
+              ))}
+            </ul>
+            <div>
+              <div className="work-image">
+                <GatsbyImage image={image} />
+              </div>
+              <div
+                className="work-text"
+                dangerouslySetInnerHTML={{ __html: html }}
+              />
+            </div>
+            <div className="section-background" />
+          </WorkSectionStyles>
+        );
+      })}
     </WorkStyles>
   );
 }
