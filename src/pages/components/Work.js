@@ -117,16 +117,19 @@ export default function Work() {
         const { frontmatter, html } = edge.node;
         const image = getImage(frontmatter.image);
         return (
-          <WorkSectionStyles>
+          <WorkSectionStyles key={frontmatter.title}>
             <h3>{frontmatter.title}</h3>
             <ul>
               {frontmatter.skills.map((skill) => (
-                <li>{skill}</li>
+                <li key={skill}>{skill}</li>
               ))}
             </ul>
             <div>
               <div className="work-image">
-                <GatsbyImage image={image} />
+                <GatsbyImage
+                  image={image}
+                  alt={`${frontmatter.title} website example.`}
+                />
               </div>
               <div
                 className="work-text"
