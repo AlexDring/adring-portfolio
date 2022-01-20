@@ -114,6 +114,7 @@ const GlobalStyles = createGlobalStyle`
     border: 2px solid var(--black);
     padding: 10px 46px 12px;
     color: var(--black);
+    position: relative;
   }
  `;
 

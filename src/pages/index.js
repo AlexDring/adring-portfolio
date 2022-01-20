@@ -8,6 +8,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Work from './components/Work';
 import ContactSide from './components/ContactSide';
+import Contact from './components/Contact';
 
 const MainStyles = styled.main`
   max-width: 1600px;
@@ -23,8 +24,9 @@ export default function HomePage() {
         <Hero />
         <About />
         <Work />
-        <ContactSide />
+        <Contact />
       </MainStyles>
+      <ContactSide />
       <Footer />
     </>
   );

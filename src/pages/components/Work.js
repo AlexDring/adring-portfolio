@@ -7,6 +7,7 @@ import Underline from './elements/Underline';
 const WorkStyles = styled.section`
   max-width: 1000px;
   margin-top: 240px;
+  margin-bottom: 240px;
   h2 {
     display: inline-block;
     font-size: 2.625rem;
