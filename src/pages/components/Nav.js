@@ -14,6 +14,7 @@ const NavStyles = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 999;
   ul {
     font-family: var(--font-header);
     display: flex;

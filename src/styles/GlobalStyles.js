@@ -83,6 +83,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--black);
     font-size: 100%;
+    position: relative;
   }
 
   h1, h2, h3, h4, h5, h6 {
