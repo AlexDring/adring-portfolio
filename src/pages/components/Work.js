@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import styled from 'styled-components';
+import Underline from './elements/Underline';
 
 const WorkStyles = styled.section`
   max-width: 1000px;
@@ -10,17 +11,6 @@ const WorkStyles = styled.section`
     display: inline-block;
     font-size: 2.625rem;
     margin-bottom: 24px;
-    position: relative;
-    ::after {
-      position: absolute;
-      content: '';
-      background: var(--gradient-light-blue);
-      z-index: -1;
-      right: 0;
-      bottom: 7px;
-      width: 100%;
-      height: 7px;
-    }
   }
   > p {
     font-size: 1.375rem;
@@ -117,7 +107,11 @@ export default function Work() {
 
   return (
     <WorkStyles>
-      <h2>Things I've made</h2>
+      <h2>
+        <Underline color="var(--gradient-light-blue)">
+          Things I've made
+        </Underline>
+      </h2>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
       {data.allMarkdownRemark.edges.map((edge) => {
         const { frontmatter, html } = edge.node;

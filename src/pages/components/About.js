@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import url from '../../assets/images/bullet.svg';
+import Underline from './elements/Underline';
 
 const AboutStyles = styled.section`
   max-width: 700px;
@@ -13,17 +14,6 @@ const AboutStyles = styled.section`
     display: inline-block;
     font-size: 2.625rem;
     margin-bottom: 30px;
-    position: relative;
-    ::after {
-      content: ' ';
-      position: absolute;
-      background: var(--gradient-light-red);
-      height: 8px;
-      width: 101%;
-      right: 0;
-      bottom: 7px;
-      z-index: -1;
-    }
   }
   p {
     font-size: 1.125rem;
@@ -65,7 +55,10 @@ const AboutStyles = styled.section`
 export default function About() {
   return (
     <AboutStyles>
-      <h2>About me</h2>
+      <h2>
+        <Underline width="102%">About me</Underline>
+      </h2>
+
       <div>
         <div>
           <p>

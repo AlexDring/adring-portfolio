@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Underline from './elements/Underline';
 
 const HeroStyles = styled.section`
   display: flex;
@@ -17,17 +18,6 @@ const HeroStyles = styled.section`
     span {
       font-size: 4.5rem;
       color: var(--black);
-      position: relative;
-      ::after {
-        content: ' ';
-        position: absolute;
-        background: var(--gradient-light-red);
-        height: 8px;
-        width: 101%;
-        right: 0;
-        bottom: 18px;
-        z-index: -1;
-      }
     }
   }
   p {
@@ -38,7 +28,7 @@ const HeroStyles = styled.section`
   button {
     position: relative;
     ::after {
-      content: ' ';
+      content: '';
       position: absolute;
       width: 100%;
       height: 100%;
@@ -54,7 +44,9 @@ export default function Hero() {
   return (
     <HeroStyles>
       <h1>
-        <span>Alex Dring.</span>
+        <Underline width="101%" bottom="18px">
+          Alex Dring.
+        </Underline>
         <br />
         Full-stack web developer.
       </h1>

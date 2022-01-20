@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Logo from './elements/Logo';
+import Underline from './elements/Underline';
 
 const NavStyles = styled.nav`
   position: fixed;
@@ -19,21 +20,9 @@ const NavStyles = styled.nav`
     flex-direction: row;
     list-style-type: none;
     text-align: right;
-    li {
-      position: relative;
-      :not(:last-child) {
-        margin-right: 30px;
-      }
-      :last-of-type:after {
-        content: ' ';
-        position: absolute;
-        background: var(--gradient-light-red);
-        height: 4px;
-        width: 102%;
-        right: 0;
-        bottom: 1px;
-        z-index: -1;
-      }
+    font-weight: 700;
+    li:not(:last-child) {
+      margin-right: 30px;
     }
   }
 `;
@@ -46,7 +35,11 @@ export default function Nav() {
         <li>About me</li>
         <li>Work</li>
         <li>Contact</li>
-        <li>Resume</li>
+        <li>
+          <Underline height="5px" bottom="3px" width="101%">
+            Resume
+          </Underline>
+        </li>
       </ul>
     </NavStyles>
   );
