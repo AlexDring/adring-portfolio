@@ -115,6 +115,18 @@ const GlobalStyles = createGlobalStyle`
     padding: 10px 46px 12px;
     color: var(--black);
     position: relative;
+    button {
+    ::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-red);
+      bottom: -4px;
+      right: -4px;
+      z-index: -1;
+    }
+  }
   }
  `;
 

@@ -31,6 +31,9 @@ const ContactSideStyles = styled.div`
       }
     }
   }
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export default function ContactSide() {

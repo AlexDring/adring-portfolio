@@ -13,6 +13,7 @@ import Contact from './components/Contact';
 const MainStyles = styled.main`
   max-width: 1600px;
   margin: auto;
+  padding: 25px;
 `;
 
 export default function HomePage() {

@@ -5,12 +5,12 @@ import Underline from './elements/Underline';
 
 const NavStyles = styled.nav`
   position: fixed;
-  width: 100%;
+  background: hsla(0, 0%, 100%, 0.7);
+  width: min(1000px, 100%);
   left: 50%;
   transform: translate(-50%, 0);
   margin: auto;
   height: 70px;
-  max-width: 1000px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +21,6 @@ const NavStyles = styled.nav`
     flex-direction: row;
     list-style-type: none;
     text-align: right;
-    font-weight: 700;
     li:not(:last-child) {
       margin-right: 30px;
     }

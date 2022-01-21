@@ -1,5 +1,5 @@
 ---
-title: "MJR Multi Venue Project"
+title: "Multi Venue Project"
 date: "2022-01-19"
 image: "./mjr-multi-venue.png"
 skills: 

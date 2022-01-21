@@ -5,14 +5,9 @@ import url from '../../assets/images/bullet.svg';
 import Underline from './elements/Underline';
 
 const AboutStyles = styled.section`
-  max-width: 700px;
-  > div {
-    display: flex;
-    gap: 50px;
-  }
   h2 {
     display: inline-block;
-    font-size: 2.625rem;
+    font-size: clamp(2.1rem, 4vw, 2.625rem);
     margin-bottom: 30px;
   }
   p {
@@ -21,6 +16,8 @@ const AboutStyles = styled.section`
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-bottom: 40px;
+    padding-inline-start: 20px;
     li {
       position: relative;
       ::before {
@@ -38,6 +35,7 @@ const AboutStyles = styled.section`
     position: relative;
     height: 250px;
     width: 250px;
+    margin: 0 auto;
     z-index: 1;
     ::after {
       content: '';
@@ -48,6 +46,13 @@ const AboutStyles = styled.section`
       right: -5px;
       bottom: -5px;
       z-index: -1;
+    }
+  }
+  @media (min-width: 800px) {
+    max-width: 700px;
+    > div {
+      display: flex;
+      gap: 50px;
     }
   }
 `;

@@ -10,11 +10,13 @@ const WorkStyles = styled.section`
   margin-bottom: 240px;
   h2 {
     display: inline-block;
-    font-size: 2.625rem;
+    font-size: clamp(2.1rem, 4vw, 2.625rem);
     margin-bottom: 24px;
+    text-decoration: underline 0.15em rgba(0, 0, 0, 0);
   }
   > p {
     font-size: 1.375rem;
+    margin-bottom: 36px;
   }
 `;
 
@@ -22,28 +24,26 @@ const WorkSectionStyles = styled.section`
   margin-bottom: 120px;
   position: relative;
   h3 {
-    display: inline-block;
-    font-size: 1.375rem;
+    display: block;
+    font-size: clamp(1.2rem, 3vw, 1.375rem);
   }
   ul {
     display: inline-flex;
+    flex-wrap: wrap;
+    padding-inline-start: 0;
+    margin-top: 0px;
     li {
       margin-right: 15px;
       font-size: 0.875rem;
     }
   }
-  > div:first-of-type {
-    padding-top: 36px;
-    display: flex;
-    align-items: center;
-  }
   .work-text {
     position: relative;
     background: #fff;
-    margin-left: -50px;
     border: 2px solid rgba(178, 202, 255, 0.2);
-    width: 480px;
-    padding: 36px;
+    width: min(90%, 480px);
+    margin: -20px auto 0 auto;
+    padding: 24px;
     ::after {
       position: absolute;
       content: '';
@@ -56,25 +56,54 @@ const WorkSectionStyles = styled.section`
     }
   }
   .work-image {
+    padding-top: 24px;
     z-index: -2;
-  }
-  &:nth-of-type(2n) {
-    .work-image {
-      order: 1;
-    }
   }
   .section-background {
     position: absolute;
-    top: 31px;
+    top: 10px;
     height: 100%;
-    width: 1300px;
-    margin-left: -150px;
+    width: calc(100% + 50px);
+    margin-left: -25px;
     z-index: -99;
     background: linear-gradient(
       180deg,
       rgba(230, 237, 255, 0.6) 0%,
       rgba(255, 255, 255, 0.6) 100%
     );
+  }
+  @media (min-width: 600px) {
+    h3 {
+      display: inline-block;
+      padding-right: 30px;
+    }
+    > div:first-of-type {
+      display: flex;
+      align-items: center;
+    }
+    .work-image {
+      padding-top: 0px;
+    }
+    &:nth-of-type(2n) {
+      .work-image {
+        order: 1;
+      }
+      .work-text {
+        margin-left: 0;
+        margin-right: -50px;
+      }
+    }
+    .section-background {
+      top: 13px;
+      width: max(100%, 1300px);
+      margin-left: -150px;
+    }
+    .work-text {
+      margin-left: -50px;
+      width: 480px;
+      /* padding: 30px; */
+      margin-top: 0px;
+    }
   }
 `;
 

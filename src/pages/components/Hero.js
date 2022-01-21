@@ -3,20 +3,17 @@ import styled from 'styled-components';
 import Underline from './elements/Underline';
 
 const HeroStyles = styled.section`
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  max-width: 1000px;
-  padding: 100px;
-  height: 100vh;
-  margin: 0 auto;
   h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 3vw, 3rem);
     color: var(--lighter-black);
     margin-bottom: 24px;
     span {
-      font-size: 4.5rem;
+      font-size: clamp(3.5rem, 5vw, 4.5rem);
       color: var(--black);
     }
   }
@@ -25,18 +22,10 @@ const HeroStyles = styled.section`
     max-width: 550px;
     margin-bottom: 40px;
   }
-  button {
-    position: relative;
-    ::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: var(--gradient-red);
-      bottom: -4px;
-      right: -4px;
-      z-index: -1;
-    }
+  @media (min-width: 800px) {
+    max-width: 1000px;
+    padding: 100px;
+    margin: 0 auto;
   }
 `;
 
@@ -44,7 +33,7 @@ export default function Hero() {
   return (
     <HeroStyles>
       <h1>
-        <Underline width="101%" bottom="18px">
+        <Underline width="101%" bottom="20%">
           Alex Dring.
         </Underline>
         <br />
@@ -52,9 +41,7 @@ export default function Hero() {
       </h1>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
-        adipisci corporis tenetur ullam quo delectus, aliquam, eos ipsum
-        molestias a dolorum neque quaerat impedit odio quibusdam ipsam
-        consequuntur dignissimos inventore!
+        adipisci corporis tenetur ullam quo delectus!
       </p>
       <button type="button">Contact me</button>
     </HeroStyles>
