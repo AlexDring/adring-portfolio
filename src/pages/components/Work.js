@@ -19,7 +19,7 @@ const WorkStyles = styled.section`
 `;
 
 const WorkSectionStyles = styled.section`
-  margin-top: 120px;
+  margin-bottom: 120px;
   position: relative;
   h3 {
     display: inline-block;

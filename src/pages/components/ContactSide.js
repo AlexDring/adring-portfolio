@@ -27,7 +27,7 @@ const ContactSideStyles = styled.div`
         opacity: 100%;
         left: 25px;
         visibility: visible;
-        background: #fff;
+        background: linear-gradient(45deg, transparent, #fff);
       }
     }
   }
