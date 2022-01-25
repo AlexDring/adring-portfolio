@@ -19,6 +19,7 @@ const HeroStyles = styled.section`
   }
   p {
     font-size: 1.25rem;
+    /* width: clamp(45ch, 50%, 75ch) */
     max-width: 550px;
     margin-bottom: 40px;
   }
@@ -33,11 +34,13 @@ export default function Hero() {
   return (
     <HeroStyles>
       <h1>
-        <Underline width="101%" bottom="20%">
-          Alex Dring.
-        </Underline>
+        Hello,
         <br />
-        Full-stack web developer.
+        <Underline width="101%" bottom="20%">
+          I'm Alex Dring.
+        </Underline>
+        {/* <br /> */}
+        {/* Full-stack web developer. */}
       </h1>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem

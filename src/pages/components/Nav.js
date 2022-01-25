@@ -36,7 +36,7 @@ export default function Nav() {
         <li>Work</li>
         <li>Contact</li>
         <li>
-          <Underline height="5px" bottom="3px" width="101%">
+          <Underline size="100% 4px" position="100% 82%">
             Resume
           </Underline>
         </li>

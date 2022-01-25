@@ -2,21 +2,13 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 const UnderlineStyles = styled.span`
-  position: relative;
-  ::after {
-    position: absolute;
-    content: '';
-    background: ${(props) =>
-      props.color ? props.color : 'var(--gradient-light-red)'};
-    z-index: -1;
-    right: -1px;
-    bottom: ${(props) => (props.bottom ? props.bottom : '8px')};
-    width: ${(props) => (props.width ? props.width : '100%')};
-    height: ${(props) => (props.height ? props.height : '8px')};
-  }
+  display: inline;
+  background: ${({ color }) => color || 'var(--gradient-light-red)'};
+  background-repeat: no-repeat;
+  background-size: ${({ size }) => size || '100% 8px'};
+  background-position: ${({ position }) => position || '100% 78%'};
 `;
 
-// eslint-disable-next-line react/prop-types
 export default function Underline(props) {
   return <UnderlineStyles {...props} />;
 }

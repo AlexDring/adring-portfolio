@@ -36,28 +36,28 @@ const GlobalStyles = createGlobalStyle`
     --gradient-blue: linear-gradient(
       90deg,
       hsl(268deg 71% 40%) 0%,
-      hsl(260deg 54% 48%) 11%,
-      hsl(252deg 52% 54%) 22%,
-      hsl(245deg 56% 60%) 33%,
-      hsl(239deg 60% 65%) 44%,
-      hsl(234deg 67% 69%) 56%,
-      hsl(230deg 74% 73%) 67%,
-      hsl(226deg 81% 76%) 78%,
-      hsl(224deg 89% 81%) 89%,
+      hsl(260deg 54% 48%) 21%,
+      hsl(252deg 52% 54%) 30%,
+      hsl(245deg 56% 60%) 39%,
+      hsl(239deg 60% 65%) 46%,
+      hsl(234deg 67% 69%) 54%,
+      hsl(230deg 74% 73%) 61%,
+      hsl(226deg 81% 76%) 69%,
+      hsl(224deg 89% 81%) 79%,
       hsl(221deg 100% 85%) 100%
     );
     --gradient-light-blue: linear-gradient(
       90deg,
-      hsl(247deg 47% 78%) 0%,
-      hsl(243deg 49% 80%) 21%,
-      hsl(238deg 52% 82%) 30%,
-      hsl(235deg 56% 83%) 39%,
-      hsl(232deg 61% 85%) 46%,
-      hsl(229deg 66% 87%) 54%,
-      hsl(226deg 71% 88%) 61%,
-      hsl(224deg 78% 90%) 69%,
-      hsl(222deg 87% 92%) 79%,
-      hsl(220deg 100% 94%) 100%
+      hsl(268deg 47% 64%) 0%,
+      hsl(260deg 50% 68%) 21%,
+      hsl(253deg 53% 73%) 30%,
+      hsl(246deg 57% 77%) 39%,
+      hsl(239deg 61% 80%) 46%,
+      hsl(233deg 67% 82%) 54%,
+      hsl(229deg 73% 85%) 61%,
+      hsl(225deg 79% 88%) 69%,
+      hsl(222deg 87% 91%) 79%,
+      hsl(219deg 100% 94%) 100%
     );
   }
 
