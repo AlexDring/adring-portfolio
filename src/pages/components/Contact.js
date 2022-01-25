@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ContactStyles = styled.section`
   margin: 300px auto;
-  width: 360px;
+  width: min(360px 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
