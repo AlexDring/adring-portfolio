@@ -5,14 +5,18 @@ import styled from 'styled-components';
 import Underline from './elements/Underline';
 
 const WorkStyles = styled.section`
-  max-width: 1000px;
   margin-top: 240px;
   margin-bottom: 240px;
+  > * {
+    margin: auto;
+  }
+  > div:first-of-type {
+    max-width: 1000px;
+  }
   h2 {
     display: inline-block;
     font-size: clamp(2.1rem, 4vw, 2.625rem);
     margin-bottom: 24px;
-    text-decoration: underline 0.15em rgba(0, 0, 0, 0);
   }
   > p {
     font-size: 1.375rem;
@@ -23,6 +27,11 @@ const WorkStyles = styled.section`
 const WorkSectionStyles = styled.section`
   margin-bottom: 120px;
   position: relative;
+  max-width: 1300px;
+  > *:not(.section-background) {
+    max-width: 1000px;
+    margin: auto;
+  }
   h3 {
     display: block;
     font-size: clamp(1.2rem, 3vw, 1.375rem);
@@ -63,8 +72,10 @@ const WorkSectionStyles = styled.section`
     position: absolute;
     top: 10px;
     height: 100%;
-    width: calc(100% + 50px);
-    margin-left: -25px;
+    max-width: 1300px;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0px);
     z-index: -99;
     background: linear-gradient(
       180deg,
@@ -72,12 +83,17 @@ const WorkSectionStyles = styled.section`
       rgba(255, 255, 255, 0.6) 100%
     );
   }
+  @media (max-width: 1300px) {
+    .section-background {
+      width: calc(100% + 50px);
+    }
+  }
   @media (min-width: 600px) {
     h3 {
       display: inline-block;
       padding-right: 30px;
     }
-    > div:first-of-type {
+    > div:nth-child(2) {
       display: flex;
       align-items: center;
     }
@@ -95,13 +111,10 @@ const WorkSectionStyles = styled.section`
     }
     .section-background {
       top: 13px;
-      width: max(100%, 1300px);
-      margin-left: -150px;
     }
     .work-text {
       margin-left: -50px;
       width: 480px;
-      /* padding: 30px; */
       margin-top: 0px;
     }
   }
@@ -137,23 +150,27 @@ export default function Work() {
 
   return (
     <WorkStyles>
-      <h2>
-        <Underline color="var(--gradient-light-blue)">
-          Things I've made
-        </Underline>
-      </h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      <div>
+        <h2>
+          <Underline color="var(--gradient-light-blue)">
+            Things I've made
+          </Underline>
+        </h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      </div>
       {data.allMarkdownRemark.edges.map((edge) => {
         const { frontmatter, html } = edge.node;
         const image = getImage(frontmatter.image);
         return (
           <WorkSectionStyles key={frontmatter.title}>
-            <h3>{frontmatter.title}</h3>
-            <ul>
-              {frontmatter.skills.map((skill) => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
+            <div>
+              <h3>{frontmatter.title}</h3>
+              <ul>
+                {frontmatter.skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </div>
             <div>
               <div className="work-image">
                 <GatsbyImage

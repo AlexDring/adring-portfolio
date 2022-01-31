@@ -61,7 +61,7 @@ export default function About() {
   return (
     <AboutStyles>
       <h2>
-        <Underline color="var(--gradient-light-blue)">About me</Underline>
+        <Underline>About me</Underline>
       </h2>
 
       <div>

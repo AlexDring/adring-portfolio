@@ -76,7 +76,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   *, *:before, *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
   }
 
   html {
@@ -87,7 +87,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin: 0 0;
+    margin: 0;
     font-family: var(--font-header);
   }
 
@@ -115,7 +115,6 @@ const GlobalStyles = createGlobalStyle`
     padding: 10px 46px 12px;
     color: var(--black);
     position: relative;
-    button {
     ::after {
       content: '';
       position: absolute;
@@ -126,7 +125,6 @@ const GlobalStyles = createGlobalStyle`
       right: -4px;
       z-index: -1;
     }
-  }
   }
  `;
 

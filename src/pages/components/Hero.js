@@ -19,8 +19,7 @@ const HeroStyles = styled.section`
   }
   p {
     font-size: 1.25rem;
-    /* width: clamp(45ch, 50%, 75ch) */
-    max-width: 550px;
+    max-width: 450px;
     margin-bottom: 40px;
   }
   @media (min-width: 800px) {
@@ -32,15 +31,13 @@ const HeroStyles = styled.section`
 
 export default function Hero() {
   return (
-    <HeroStyles>
+    <HeroStyles onScroll={() => console.log('test!!!')}>
       <h1>
         Hello,
         <br />
         <Underline width="101%" bottom="20%">
           I'm Alex Dring.
         </Underline>
-        {/* <br /> */}
-        {/* Full-stack web developer. */}
       </h1>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem

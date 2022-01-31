@@ -78,7 +78,7 @@ export default function Nav() {
   return (
     <NavStyles open={open}>
       <Logo />
-      <ul>
+      {/* <ul>
         <li>About me</li>
         <li>Work</li>
         <li>Contact</li>
@@ -87,7 +87,7 @@ export default function Nav() {
             Resume
           </Underline>
         </li>
-      </ul>
+      </ul> */}
       <button
         type="button"
         onClick={() => setOpen(!open)}
