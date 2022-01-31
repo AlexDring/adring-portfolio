@@ -43,7 +43,9 @@ export default function Hero() {
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
         adipisci corporis tenetur ullam quo delectus!
       </p>
-      <button type="button">Contact me</button>
+      <button className="gradient" type="button">
+        Contact me
+      </button>
     </HeroStyles>
   );
 }

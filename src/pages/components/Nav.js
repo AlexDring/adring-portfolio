@@ -23,13 +23,13 @@ const NavStyles = styled.nav`
     margin: 0;
     padding: 0;
     height: 100vh;
-    width: 60%;
+    width: 75%;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     top: 0;
     transition: all 0.2s ease-out;
-    right: ${({ open }) => (open ? '0' : '-350px')};
+    right: ${({ open }) => (open ? '0' : '-75%')};
     color: #fff;
     z-index: 998;
     li {
@@ -78,7 +78,7 @@ export default function Nav() {
   return (
     <NavStyles open={open}>
       <Logo />
-      {/* <ul>
+      <ul>
         <li>About me</li>
         <li>Work</li>
         <li>Contact</li>
@@ -87,7 +87,7 @@ export default function Nav() {
             Resume
           </Underline>
         </li>
-      </ul> */}
+      </ul>
       <button
         type="button"
         onClick={() => setOpen(!open)}

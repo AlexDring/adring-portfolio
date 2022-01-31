@@ -115,7 +115,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 10px 46px 12px;
     color: var(--black);
     position: relative;
-    ::after {
+    &.gradient::after {
       content: '';
       position: absolute;
       width: 100%;

@@ -12,15 +12,15 @@ const WorkStyles = styled.section`
   }
   > div:first-of-type {
     max-width: 1000px;
-  }
-  h2 {
-    display: inline-block;
-    font-size: clamp(2.1rem, 4vw, 2.625rem);
-    margin-bottom: 24px;
-  }
-  > p {
-    font-size: 1.375rem;
-    margin-bottom: 36px;
+    h2 {
+      display: inline-block;
+      font-size: clamp(2.1rem, 4vw, 2.625rem);
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: 1.375rem;
+      margin-bottom: 36px;
+    }
   }
 `;
 
