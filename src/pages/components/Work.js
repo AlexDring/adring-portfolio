@@ -149,7 +149,7 @@ export default function Work() {
   `);
 
   return (
-    <WorkStyles>
+    <WorkStyles id="work">
       <div>
         <h2>
           <Underline color="var(--gradient-light-blue)">

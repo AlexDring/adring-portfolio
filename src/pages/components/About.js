@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import url from '../../assets/images/bullet.svg';
 import Underline from './elements/Underline';
 
@@ -59,11 +60,10 @@ const AboutStyles = styled.section`
 
 export default function About() {
   return (
-    <AboutStyles>
+    <AboutStyles id="about">
       <h2>
         <Underline>About me</Underline>
       </h2>
-
       <div>
         <div>
           <p>

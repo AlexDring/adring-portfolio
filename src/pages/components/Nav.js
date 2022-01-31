@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import * as React from 'react';
 import styled from 'styled-components';
 import Logo from './elements/Logo';
@@ -34,6 +36,10 @@ const NavStyles = styled.nav`
     z-index: 998;
     li {
       margin: 20px auto;
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
     }
   }
   button {
@@ -58,14 +64,18 @@ const NavStyles = styled.nav`
       height: auto;
       width: auto;
       background: transparent;
-      color: var(--black);
       display: flex;
       flex-direction: row;
       text-align: right;
       li {
+        color: var(--black);
+
         margin: 0;
         :not(:last-child) {
           margin-right: 30px;
+        }
+        a {
+          color: var(--black);
         }
       }
     }
@@ -79,9 +89,9 @@ export default function Nav() {
     <NavStyles open={open}>
       <Logo />
       <ul>
-        <li>About me</li>
-        <li>Work</li>
-        <li>Contact</li>
+        <Link anchor="about" text="About me" />
+        <Link anchor="work" text="Work" />
+        <Link anchor="contact" text="Contact" />
         <li>
           <Underline size="100% 4px" position="100% 82%">
             Resume
@@ -98,3 +108,11 @@ export default function Nav() {
     </NavStyles>
   );
 }
+
+const Link = ({ anchor, text }) => (
+  <li>
+    <AnchorLink to={`/#${anchor}`} title={text}>
+      {text}
+    </AnchorLink>
+  </li>
+);

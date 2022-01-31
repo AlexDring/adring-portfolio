@@ -31,7 +31,7 @@ const ContactStyles = styled.section`
 
 export default function Contact() {
   return (
-    <ContactStyles>
+    <ContactStyles id="contact">
       <h2>Get in touch</h2>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
