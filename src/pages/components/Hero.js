@@ -1,3 +1,4 @@
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import * as React from 'react';
 import styled from 'styled-components';
 import Underline from './elements/Underline';
@@ -43,9 +44,12 @@ export default function Hero() {
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
         adipisci corporis tenetur ullam quo delectus!
       </p>
-      <button className="gradient" type="button">
+      <AnchorLink to="/#contact" className="gradient">
         Contact me
-      </button>
+      </AnchorLink>
+      {/* <button className="gradient" type="button">
+        Contact me
+      </button> */}
     </HeroStyles>
   );
 }
