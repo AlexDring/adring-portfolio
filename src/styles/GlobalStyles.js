@@ -105,8 +105,11 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.75rem;
     list-style: none;
   }
+  a {
+    text-decoration: none;
+  }
   
-  button {
+  a.gradient {
     font-family: var(--font-header);
     font-size: 1.125rem;
     font-weight: 700;
@@ -115,7 +118,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 10px 46px 12px;
     color: var(--black);
     position: relative;
-    &.gradient::after {
+    &::after {
       content: '';
       position: absolute;
       width: 100%;

@@ -38,7 +38,6 @@ const NavStyles = styled.nav`
       margin: 20px auto;
       a {
         color: #fff;
-        text-decoration: none;
       }
     }
   }
@@ -89,9 +88,9 @@ export default function Nav() {
     <NavStyles open={open}>
       <Logo />
       <ul>
-        <Link anchor="about" text="About me" />
-        <Link anchor="work" text="Work" />
-        <Link anchor="contact" text="Contact" />
+        <Link anchor="about" />
+        <Link anchor="work" />
+        <Link anchor="contact" />
         <li>
           <Underline size="100% 4px" position="100% 82%">
             Resume
@@ -111,8 +110,6 @@ export default function Nav() {
 
 const Link = ({ anchor, text }) => (
   <li>
-    <AnchorLink to={`/#${anchor}`} title={text}>
-      {text}
-    </AnchorLink>
+    <AnchorLink to={`/#${anchor}`}>{text}</AnchorLink>
   </li>
 );
