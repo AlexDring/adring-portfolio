@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import styled from 'styled-components';
 import Underline from './elements/Underline';
+import WorkSection from './WorkSection';
 
 const WorkStyles = styled.section`
   margin-top: 240px;
@@ -20,102 +21,6 @@ const WorkStyles = styled.section`
     p {
       font-size: 1.375rem;
       margin-bottom: 36px;
-    }
-  }
-`;
-
-const WorkSectionStyles = styled.section`
-  margin-bottom: 120px;
-  position: relative;
-  max-width: 1300px;
-  > *:not(.section-background) {
-    max-width: 1000px;
-    margin: auto;
-  }
-  h3 {
-    display: block;
-    font-size: clamp(1.2rem, 3vw, 1.375rem);
-  }
-  ul {
-    display: inline-flex;
-    flex-wrap: wrap;
-    padding-inline-start: 0;
-    margin-top: 0px;
-    li {
-      margin-right: 15px;
-      font-size: 0.875rem;
-    }
-  }
-  .work-text {
-    position: relative;
-    background: #fff;
-    border: 2px solid rgba(178, 202, 255, 0.2);
-    width: min(90%, 480px);
-    margin: -20px auto 0 auto;
-    padding: 24px;
-    ::after {
-      position: absolute;
-      content: '';
-      background: var(--gradient-blue);
-      z-index: -1;
-      right: -7px;
-      bottom: -7px;
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .work-image {
-    padding-top: 24px;
-    z-index: -2;
-  }
-  .section-background {
-    position: absolute;
-    top: 10px;
-    height: 100%;
-    max-width: 1300px;
-    width: 100%;
-    left: 50%;
-    transform: translate(-50%, 0px);
-    z-index: -99;
-    background: linear-gradient(
-      180deg,
-      rgba(230, 237, 255, 0.6) 0%,
-      rgba(255, 255, 255, 0.6) 100%
-    );
-  }
-  @media (max-width: 1300px) {
-    .section-background {
-      width: calc(100% + 50px);
-    }
-  }
-  @media (min-width: 600px) {
-    h3 {
-      display: inline-block;
-      padding-right: 30px;
-    }
-    > div:nth-child(2) {
-      display: flex;
-      align-items: center;
-    }
-    .work-image {
-      padding-top: 0px;
-    }
-    &:nth-of-type(2n) {
-      .work-image {
-        order: 1;
-      }
-      .work-text {
-        margin-left: 0;
-        margin-right: -50px;
-      }
-    }
-    .section-background {
-      top: 13px;
-    }
-    .work-text {
-      margin-left: -50px;
-      width: 480px;
-      margin-top: 0px;
     }
   }
 `;
@@ -160,31 +65,14 @@ export default function Work() {
       </div>
       {data.allMarkdownRemark.edges.map((edge) => {
         const { frontmatter, html } = edge.node;
-        const image = getImage(frontmatter.image);
+        const { title, skills, image } = frontmatter;
         return (
-          <WorkSectionStyles key={frontmatter.title}>
-            <div>
-              <h3>{frontmatter.title}</h3>
-              <ul>
-                {frontmatter.skills.map((skill) => (
-                  <li key={skill}>{skill}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <div className="work-image">
-                <GatsbyImage
-                  image={image}
-                  alt={`${frontmatter.title} website example.`}
-                />
-              </div>
-              <div
-                className="work-text"
-                dangerouslySetInnerHTML={{ __html: html }}
-              />
-            </div>
-            <div className="section-background" />
-          </WorkSectionStyles>
+          <WorkSection
+            title={title}
+            skills={skills}
+            image={image}
+            html={html}
+          />
         );
       })}
     </WorkStyles>
