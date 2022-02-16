@@ -9,7 +9,8 @@ const WorkStyles = styled.section`
   margin-top: 240px;
   margin-bottom: 240px;
   > * {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   > div:first-of-type {
     max-width: 1000px;

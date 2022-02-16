@@ -5,7 +5,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
 const WorkSectionStyles = styled.section`
-  margin-bottom: 120px;
   position: relative;
   max-width: 1300px;
   margin-bottom: 120px;
@@ -66,8 +65,8 @@ const WorkSectionStyles = styled.section`
       rgba(230, 237, 255, 0.6) 0%,
       rgba(255, 255, 255, 0.6) 100%
     );
-    opacity: ${({ inView }) => (inView ? '100%' : '0%')};
-    transition: opacity 1s ease-in-out;
+    /* opacity: ${({ inView }) => (inView ? '100%' : '0%')};
+    transition: opacity 1s ease-in-out; */
   }
   @media (max-width: 1300px) {
     .section-background {
