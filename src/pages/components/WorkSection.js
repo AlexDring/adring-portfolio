@@ -108,6 +108,7 @@ const WorkSectionStyles = styled.section`
 export default function WorkSection({ title, skills, image, html }) {
   const snazzyImage = getImage(image);
   const { ref, inView } = useInView({
+    triggerOnce: true,
     threshold: 0.75,
   });
 

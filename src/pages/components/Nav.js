@@ -88,9 +88,9 @@ export default function Nav() {
     <NavStyles open={open}>
       <Logo />
       <ul>
-        <Link anchor="about" />
-        <Link anchor="work" />
-        <Link anchor="contact" />
+        <Link anchor="about" text="About me" />
+        <Link anchor="work" text="Work" />
+        <Link anchor="contact" text="Contact" />
         <li>
           <Underline size="100% 4px" position="100% 82%">
             Resume

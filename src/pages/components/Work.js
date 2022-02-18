@@ -69,6 +69,7 @@ export default function Work() {
         const { title, skills, image } = frontmatter;
         return (
           <WorkSection
+            key={title}
             title={title}
             skills={skills}
             image={image}
