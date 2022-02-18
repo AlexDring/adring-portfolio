@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const ContactStyles = styled.section`
   height: 100vh;
-  background: radial-gradient(hsla(0, 0%, 0%, 0.6), transparent);
+  /* background: radial-gradient(hsla(0, 0%, 0%, 0.6), transparent); */
   overflow: hidden;
   padding: 0;
   display: flex;
