@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import url from '../../assets/images/bullet.svg';
 import Underline from './elements/Underline';
 

@@ -62,7 +62,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   @font-face {
-    font-family: 'Now';
+    font-family: 'Inter-Bold';
     src: url($headerFont)
     font-style: bold;
     font-weight: 700;

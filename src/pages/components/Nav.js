@@ -4,7 +4,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import Logo from './elements/Logo';
 import Underline from './elements/Underline';
-import { debounce } from '../../utils/helpers';
+import resume from '../../assets/downloads/Alex Dring CV.pdf';
 
 const NavStyles = styled.nav`
   display: flex;
@@ -98,7 +98,11 @@ export default function Nav() {
         <Link anchor="work" text="Work" />
         <Link anchor="contact" text="Contact" />
         <li>
-          <Underline position="100% 82%">Resume</Underline>
+          <Underline position="100% 82%">
+            <a href={resume} target="_blank" rel="noreferrer noopener">
+              Resume
+            </a>
+          </Underline>
         </li>
       </ul>
       <button
