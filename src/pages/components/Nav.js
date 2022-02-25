@@ -11,11 +11,11 @@ const NavStyles = styled.nav`
   postion: relative;
   justify-content: space-between;
   font-family: var(--font-header);
-  background: hsla(0, 0%, 100%, 0.7);
+  background: hsla(0, 0%, 100%, 0.9);
   align-items: center;
   padding: 20px;
   position: fixed;
-  top: ${({ visible }) => (visible ? '0px' : '-70px')};
+  top: 0;
   transition: top 0.5s ease-in-out;
   left: 50%;
   transform: translate(-50%, 0);
@@ -87,31 +87,9 @@ const NavStyles = styled.nav`
 
 export default function Nav() {
   const [open, setOpen] = React.useState(false);
-  const [prevScrollPos, setPrevScrollPos] = React.useState(0);
-  const [visible, setVisible] = React.useState(true);
-  console.log('rendered');
-  const handleScroll = debounce(() => {
-    const currentScrollPos = window.pageYOffset; // pageYOffset = how many pixels away from the top.
 
-    setVisible(
-      (prevScrollPos > currentScrollPos &&
-        prevScrollPos - currentScrollPos > 70) ||
-        currentScrollPos < 10
-    );
-
-    setPrevScrollPos(currentScrollPos);
-    // timer set to 100 milliseconds:
-  }, 100);
-
-  React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos, visible, handleScroll]);
-
-  console.log(prevScrollPos, visible);
   return (
-    <NavStyles open={open} visible={visible}>
+    <NavStyles open={open}>
       <AnchorLink to="#">
         <Logo />
       </AnchorLink>
