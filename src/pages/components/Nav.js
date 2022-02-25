@@ -71,12 +71,13 @@ const NavStyles = styled.nav`
       /* text-align: right; */
       li {
         color: var(--black);
-
         margin: 0;
         :not(:last-child) {
           margin-right: 30px;
         }
-        a {
+        a,
+        span {
+          font-weight: 700;
           color: var(--black);
         }
       }

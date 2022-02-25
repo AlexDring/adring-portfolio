@@ -7,14 +7,14 @@ const UnderlineStyles = styled.span`
   background: ${({ color }) => color || 'var(--gradient-light-red)'};
   background-repeat: no-repeat;
   background-size: ${({ inView }) => (inView ? '100% 12%' : '0% 12%')};
-  background-position: ${({ position }) => position || '100% 78%'};
+  background-position: ${({ position }) => position || '100% 85%'};
   transition: background-size 1s ease-in;
 `;
 
 export default function Underline(props) {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.75,
+    threshold: 0.65,
   });
 
   return <UnderlineStyles inView={inView} ref={ref} {...props} />;

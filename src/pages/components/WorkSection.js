@@ -65,7 +65,7 @@ const WorkSectionStyles = styled.section`
       rgba(230, 237, 255, 0.6) 0%,
       rgba(255, 255, 255, 0.6) 100%
     );
-    /* opacity: ${({ inView }) => (inView ? '100%' : '0%')};
+    opacity: ${({ inView }) => (inView ? '100%' : '0%')};
     transition: opacity 1s ease-in-out; */
   }
   @media (max-width: 1300px) {
@@ -101,6 +101,22 @@ const WorkSectionStyles = styled.section`
       margin-left: -50px;
       width: 480px;
       margin-top: 0px;
+      a {
+        font-family: var(--font-header);
+        font-weight: 700;
+        text-transform: uppercase;
+        + a {
+          margin-left: 24px;
+        }
+        &:hover {
+          display: inline;
+          background: var(--gradient-light-red);
+          background-repeat: no-repeat;
+          background-size: 0% 12%;
+          background-position: 100% 78%;
+          transition: background-size 1s ease-in;
+        }
+      }
     }
   }
 `;
@@ -133,11 +149,21 @@ export default function WorkSection({
         <div className="work-image">
           <GatsbyImage image={snazzyImage} alt={`${title} website example.`} />
         </div>
-        <div className="work-text" dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
-      <div>
-        {github && <a href={github}>Github</a>}{' '}
-        {link && <a href={link}>Link</a>}
+        <div className="work-text">
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <div>
+            {github && (
+              <a href={github} target="_blank" rel="noreferrer noopener">
+                Github
+              </a>
+            )}
+            {link && (
+              <a href={link} target="_blank" rel="noreferrer noopener">
+                Link
+              </a>
+            )}
+          </div>
+        </div>
       </div>
       <div className="section-background" />
     </WorkSectionStyles>

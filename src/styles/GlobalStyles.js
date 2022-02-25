@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
-import headerFont from '../assets/fonts/Now-Bold.otf';
+import headerFont from '../assets/fonts/Inter-Bold.otf';
 import bodyFont from '../assets/fonts/GeneralSans-Regular.otf';
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --font-header: 'Now', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    --font-header: 'Inter-Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
     --black: #003752;
     --lighter-black: #335F75;
     --gradient-red: linear-gradient(
@@ -107,6 +107,7 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
   a {
+    color: inherit;
     text-decoration: none;
   }
   
