@@ -46,14 +46,14 @@ export default function ContactSide() {
       >
         <StaticImage
           placeholder="tracedSVG"
-          src="../../assets/images/github.svg"
+          src="../assets/images/github.svg"
           alt="github"
         />
       </a>
       <a href="mailto:info@adring.co.uk">
         <StaticImage
           placeholder="tracedSVG"
-          src="../../assets/images/mail.svg"
+          src="../assets/images/mail.svg"
           alt="email"
         />
         <div className="contact-details">info@adring.co.uk</div>
@@ -61,7 +61,7 @@ export default function ContactSide() {
       <a href="tel:07982718898">
         <StaticImage
           placeholder="tracedSVG"
-          src="../../assets/images/phone.svg"
+          src="../assets/images/phone.svg"
           alt="phone"
         />
         <div className="contact-details">07982718898</div>

@@ -4,7 +4,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import Logo from './elements/Logo';
 import Underline from './elements/Underline';
-import resume from '../../assets/downloads/Alex Dring CV.pdf';
+import resume from '../assets/downloads/Alex Dring CV.pdf';
 
 const NavStyles = styled.nav`
   display: flex;

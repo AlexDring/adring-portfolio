@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
-import url from '../../assets/images/bullet.svg';
+import url from '../assets/images/bullet.svg';
 import Underline from './elements/Underline';
 
 const AboutStyles = styled.section`
@@ -93,7 +93,7 @@ export default function About() {
         </div>
         <div className="image-wrap">
           <StaticImage
-            src="../../assets/images/me-portrait.png"
+            src="../assets/images/me-portrait.png"
             alt="Portrait photo of me."
             placeholder="blurred"
             layout="fixed"
