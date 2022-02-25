@@ -94,6 +94,7 @@ const GlobalStyles = createGlobalStyle`
   p {
     margin: 0;
     line-height: 150%;
+    margin-bottom: 12px;
   }
 
   section {

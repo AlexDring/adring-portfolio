@@ -111,7 +111,9 @@ export default function Nav() {
   console.log(prevScrollPos, visible);
   return (
     <NavStyles open={open} visible={visible}>
-      <Logo />
+      <AnchorLink to="#">
+        <Logo />
+      </AnchorLink>
       <ul>
         <Link anchor="about" text="About me" />
         <Link anchor="work" text="Work" />

@@ -13,6 +13,7 @@ const HeroStyles = styled.section`
     font-size: clamp(2rem, 3vw, 3rem);
     color: var(--lighter-black);
     margin-bottom: 24px;
+    line-height: 150%;
     span {
       font-size: clamp(3.5rem, 5vw, 4.5rem);
       color: var(--black);
@@ -20,8 +21,8 @@ const HeroStyles = styled.section`
   }
   p {
     font-size: 1.25rem;
-    max-width: 450px;
-    margin-bottom: 40px;
+    max-width: 560px;
+    margin-bottom: 32px;
   }
   @media (min-width: 800px) {
     max-width: 1000px;
@@ -32,20 +33,23 @@ const HeroStyles = styled.section`
 
 export default function Hero() {
   return (
-    <HeroStyles onScroll={() => console.log('test!!!')}>
+    <HeroStyles>
       <h1>
         Hello,
         <br />
         <Underline width="101%" bottom="20%">
           I'm Alex Dring.
         </Underline>
+        <br />A full-stack web developer, based in Bristol.
       </h1>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
-        adipisci corporis tenetur ullam quo delectus!
+        I’ve recently completed University of Helsinki’s Full Stack Open - the
+        main focus is on building single page applications with ReactJS that use
+        REST APIs built with Node.js. I'm currently looking for a role in that
+        field!
       </p>
       <AnchorLink to="/#contact" className="gradient">
-        Contact me
+        Get in touch
       </AnchorLink>
       {/* <button className="gradient" type="button">
         Contact me

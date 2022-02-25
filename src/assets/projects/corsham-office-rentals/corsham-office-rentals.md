@@ -1,6 +1,6 @@
 ---
 title: "Corsham Office Rentals"
-date: "2022-01-18"
+order: 2
 image: "./corsham-office-rentals.png"
 skills: 
   - WordPress
@@ -10,4 +10,4 @@ link: https://www.corshamofficerentals.co.uk/
 github: https://github.com/AlexDring/Corsham-Office-Rentals
 ---
 
-Yaba!!! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem adipisci corporis tenetur ullam quo delectus, aliquam, eos ipsum molestias a dolorum neque quaerat impedit odio quibusdam ipsam consequuntur dignissimos inventore!
+A custom theme developed for a client to display office space availability for their block of offices. The theme acheives 95+ on all Google Lighthouse tests.

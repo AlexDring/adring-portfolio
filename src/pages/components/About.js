@@ -50,7 +50,7 @@ const AboutStyles = styled.section`
     }
   }
   @media (min-width: 800px) {
-    max-width: 700px;
+    max-width: 900px;
     > div {
       display: flex;
       gap: 50px;
@@ -67,17 +67,28 @@ export default function About() {
       <div>
         <div>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
-            adipisci corporis tenetur ullam quo delectus, aliquam, eos ipsum
-            molestias a dolorum neque quaerat impedit odio quibusdam ipsam
-            consequuntur dignissimos inventore!
+            I got started in the web development world by offerring websites to
+            small business owners, initially using pre-made WordPress themes and
+            page builders, I quickly moved on to developing custom websites,
+            built from the ground up.
           </p>
+
+          <p>
+            I’ve worked with clients from ideation through to launch. Going
+            through their needs and requirements, creating a design in
+            Figma/Photoshop and then developing a custom website that's
+            perfectly suited to them.
+          </p>
+          <p>Some technologies I've been working with recently:</p>
+
           <ul>
-            <li>Javascript</li>
-            <li>Html</li>
-            <li>CSS</li>
+            <li>JavaScript</li>
             <li>React</li>
-            <li>Express Js</li>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>Gatsby</li>
+            <li>Heroku</li>
+            <li>HTML & CSS</li>
             <li>WordPress</li>
           </ul>
         </div>

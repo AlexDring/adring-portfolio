@@ -24,7 +24,7 @@ const ContactStyles = styled.section`
     }
     p {
       font-size: 1.125rem;
-      margin-bottom: 24px;
+      margin-bottom: 36px;
     }
   }
   /* video {
@@ -45,8 +45,8 @@ export default function Contact() {
       <div>
         <h2>Get in touch</h2>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
-          adipisci corporis tenetur ullam quo delectus, aliquam.
+          I'm currently open to new opportunities. Whether you've got a question
+          or just want to say hello, don't hesitate to get in touch!
         </p>
         <a className="gradient" href="mailto:info@adring.co.uk">
           Contact me

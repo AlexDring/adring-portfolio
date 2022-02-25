@@ -105,13 +105,20 @@ const WorkSectionStyles = styled.section`
   }
 `;
 
-export default function WorkSection({ title, skills, image, html }) {
+export default function WorkSection({
+  title,
+  skills,
+  image,
+  html,
+  link,
+  github,
+}) {
   const snazzyImage = getImage(image);
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.75,
   });
-
+  console.log({ link, github });
   return (
     <WorkSectionStyles key={title} ref={ref} inView={inView}>
       <div>
@@ -127,6 +134,10 @@ export default function WorkSection({ title, skills, image, html }) {
           <GatsbyImage image={snazzyImage} alt={`${title} website example.`} />
         </div>
         <div className="work-text" dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
+      <div>
+        {github && <a href={github}>Github</a>}{' '}
+        {link && <a href={link}>Link</a>}
       </div>
       <div className="section-background" />
     </WorkSectionStyles>

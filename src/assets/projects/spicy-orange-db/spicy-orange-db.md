@@ -1,16 +1,18 @@
 ---
 title: "Spicy Orange Database"
-date: "2022-01-19"
+order: 1
 image: "./spicy-orange-db.png"
 skills: 
   - React
-  - Styled Components
-  - Auth0
-  - OMDB api
+  - React Query
+  - Node.js
   - Express.js
   - Heroku
+  - Auth0
+  - OMDB api
+  - Styled Components
 link: https://spicyorange.co.uk/
 github: https://github.com/AlexDring/spicy-orange-db-react
 ---
 
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem adipisci corporis tenetur ullam quo delectus, aliquam, eos ipsum molestias a dolorum neque quaerat impedit odio quibusdam ipsam consequuntur dignissimos inventore!
+A film, tv and game review website created for my friends and I. Users can search for any piece of media that exists on the Internet Movie Database and add it to a list of recommendations for other users to save to their watchlist or review.

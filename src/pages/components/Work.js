@@ -7,7 +7,7 @@ import WorkSection from './WorkSection';
 
 const WorkStyles = styled.section`
   margin-top: 240px;
-  margin-bottom: 240px;
+  /* margin-bottom: 240px; */
   > * {
     margin-left: auto;
     margin-right: auto;
@@ -29,7 +29,7 @@ const WorkStyles = styled.section`
 export default function Work() {
   const data = useStaticQuery(graphql`
     query MyQuery {
-      allMarkdownRemark(sort: { fields: frontmatter___date, order: ASC }) {
+      allMarkdownRemark(sort: { fields: frontmatter___order, order: ASC }) {
         edges {
           node {
             id
@@ -62,11 +62,14 @@ export default function Work() {
             Things I've made
           </Underline>
         </h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p>
+          Below are a few examples of work completed for clients and personal
+          projects.
+        </p>
       </div>
       {data.allMarkdownRemark.edges.map((edge) => {
         const { frontmatter, html } = edge.node;
-        const { title, skills, image } = frontmatter;
+        const { title, skills, image, link, github } = frontmatter;
         return (
           <WorkSection
             key={title}
@@ -74,6 +77,8 @@ export default function Work() {
             skills={skills}
             image={image}
             html={html}
+            link={link}
+            github={github}
           />
         );
       })}
