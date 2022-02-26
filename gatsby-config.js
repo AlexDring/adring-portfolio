@@ -25,5 +25,11 @@ module.exports = {
         offset: -100,
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/assets/images/favicon.png',
+      },
+    },
   ],
 };
