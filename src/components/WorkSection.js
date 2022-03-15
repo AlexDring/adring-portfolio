@@ -1,8 +1,8 @@
-/* eslint-disable react/prop-types */
 import * as React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const WorkSectionStyles = styled.section`
   position: relative;
@@ -134,7 +134,7 @@ export default function WorkSection({
     triggerOnce: true,
     threshold: 0.75,
   });
-  console.log({ link, github });
+
   return (
     <WorkSectionStyles key={title} ref={ref} inView={inView}>
       <div>
@@ -169,3 +169,12 @@ export default function WorkSection({
     </WorkSectionStyles>
   );
 }
+
+WorkSection.propTypes = {
+  title: PropTypes.string,
+  skills: PropTypes.array,
+  image: PropTypes.object,
+  html: PropTypes.node,
+  link: PropTypes.string,
+  github: PropTypes.string,
+};

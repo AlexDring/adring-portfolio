@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { graphql, useStaticQuery } from 'gatsby';
 import * as React from 'react';
 import styled from 'styled-components';

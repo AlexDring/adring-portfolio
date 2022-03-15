@@ -1,10 +1,10 @@
-/* eslint-disable react/prop-types */
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import * as React from 'react';
 import styled from 'styled-components';
 import Logo from './elements/Logo';
 import Underline from './elements/Underline';
 import resume from '../assets/downloads/Alex Dring CV.pdf';
+import NavLink from './elements/NavLink';
 
 const NavStyles = styled.nav`
   display: flex;
@@ -87,37 +87,43 @@ const NavStyles = styled.nav`
 
 export default function Nav() {
   const [open, setOpen] = React.useState(false);
-
   return (
-    <NavStyles open={open}>
-      <AnchorLink to="#">
+    <NavStyles aria-label="Main menu" open={open}>
+      <AnchorLink to="/#top" title="go to top of page">
         <Logo />
       </AnchorLink>
       <ul>
-        <Link anchor="about" text="About me" />
-        <Link anchor="work" text="Work" />
-        <Link anchor="contact" text="Contact" />
+        <NavLink setOpen={setOpen} open={open} anchor="about" text="About me" />
+        <NavLink
+          setOpen={setOpen}
+          open={open}
+          anchor="work"
+          text="My Work"
+          title="A selection of my work and projects"
+        />
+        <NavLink
+          setOpen={setOpen}
+          open={open}
+          anchor="contact"
+          text="Contact"
+        />
         <li>
-          <Underline position="100% 82%">
+          <Underline>
             <a href={resume} target="_blank" rel="noreferrer noopener">
-              Resume
+              Résumé
             </a>
           </Underline>
         </li>
       </ul>
       <button
         type="button"
-        onClick={() => setOpen(!open)}
         className="close-nav"
+        onClick={() => setOpen(!open)}
+        aria-expanded={!!open}
+        aria-controls="menu"
       >
         {open ? '×' : '☰'}
       </button>
     </NavStyles>
   );
 }
-
-const Link = ({ anchor, text }) => (
-  <li>
-    <AnchorLink to={`/#${anchor}`}>{text}</AnchorLink>
-  </li>
-);

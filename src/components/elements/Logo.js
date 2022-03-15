@@ -31,8 +31,6 @@ const LogoStyles = styled.div`
   :hover {
     div:first-of-type {
       background: var(--gradient-light-red);
-      /* color: white; */
-      /* border: none; */
     }
     div:last-of-type {
       top: 0px;
@@ -43,7 +41,7 @@ const LogoStyles = styled.div`
 
 export default function Logo() {
   return (
-    <LogoStyles>
+    <LogoStyles aria-label="logo">
       <div>AD</div>
       <div />
     </LogoStyles>

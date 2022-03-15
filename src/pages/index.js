@@ -2,7 +2,6 @@ import * as React from 'react';
 import 'normalize.css';
 import styled from 'styled-components';
 import GlobalStyles from '../styles/GlobalStyles';
-import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import Hero from '../components/Hero';
 import About from '../components/About';
@@ -30,7 +29,6 @@ export default function HomePage() {
         <Contact />
       </MainStyles>
       <ContactSide />
-      <Footer />
     </>
   );
 }

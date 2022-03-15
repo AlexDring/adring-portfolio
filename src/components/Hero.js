@@ -5,6 +5,7 @@ import Underline from './elements/Underline';
 
 const HeroStyles = styled.section`
   height: 100vh;
+  min-height: 900px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -15,7 +16,7 @@ const HeroStyles = styled.section`
     margin-bottom: 24px;
     line-height: 150%;
     span {
-      font-size: clamp(3.5rem, 5vw, 4.5rem);
+      font-size: clamp(3.3rem, 5vw, 4.5rem);
       color: var(--black);
     }
   }
@@ -33,7 +34,7 @@ const HeroStyles = styled.section`
 
 export default function Hero() {
   return (
-    <HeroStyles>
+    <HeroStyles id="top">
       <h1>
         Hello,
         <br />
@@ -44,16 +45,13 @@ export default function Hero() {
       </h1>
       <p>
         I’ve recently completed University of Helsinki’s Full Stack Open - the
-        main focus is on building single page applications with ReactJS that use
+        main focus on building single page applications with ReactJS that use
         REST APIs built with Node.js. I'm currently looking for a role in that
         field!
       </p>
       <AnchorLink to="/#contact" className="gradient">
         Get in touch
       </AnchorLink>
-      {/* <button className="gradient" type="button">
-        Contact me
-      </button> */}
     </HeroStyles>
   );
 }

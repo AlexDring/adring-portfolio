@@ -109,6 +109,10 @@ const GlobalStyles = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+    :focus {
+      outline: auto 2px Highlight;
+      outline: auto 5px -webkit-focus-ring-color;
+    }
   }
   
   a.gradient {
