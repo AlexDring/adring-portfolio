@@ -152,14 +152,14 @@ export default function WorkSection({
         <div className="work-text">
           <div dangerouslySetInnerHTML={{ __html: html }} />
           <div>
+            {link && (
+              <a href={link} target="_blank" rel="noreferrer noopener">
+                Open website
+              </a>
+            )}
             {github && (
               <a href={github} target="_blank" rel="noreferrer noopener">
                 Github
-              </a>
-            )}
-            {link && (
-              <a href={link} target="_blank" rel="noreferrer noopener">
-                Link
               </a>
             )}
           </div>
