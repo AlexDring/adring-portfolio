@@ -109,7 +109,12 @@ export default function Nav() {
         />
         <li>
           <Underline>
-            <a href={resume} target="_blank" rel="noreferrer noopener">
+            <a
+              href={resume}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Résumé, opens as a PDF"
+            >
               Résumé
             </a>
           </Underline>

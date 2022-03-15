@@ -2,6 +2,7 @@ import * as React from 'react';
 import 'normalize.css';
 import styled from 'styled-components';
 import { SkipNavLink, SkipNavContent } from '@reach/skip-nav';
+import Helmet from 'react-helmet';
 import GlobalStyles from '../styles/GlobalStyles';
 import Nav from '../components/Nav';
 import Hero from '../components/Hero';
@@ -22,6 +23,11 @@ const MainStyles = styled.main`
 export default function HomePage() {
   return (
     <div>
+      <Helmet>
+        <html lang="en" />
+        <meta charSet="utf-8" />
+        <title>Alex Dring's Portfolio</title>
+      </Helmet>
       <GlobalStyles />
       <SkipNavLink />
       <Nav />
