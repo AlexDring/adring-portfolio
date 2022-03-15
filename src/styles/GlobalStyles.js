@@ -135,6 +135,10 @@ const GlobalStyles = createGlobalStyle`
       z-index: -1;
     }
   }
+
+ [data-reach-skip-link] {
+   margin-top: 70px
+ }
  `;
 
 export default GlobalStyles;
