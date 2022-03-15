@@ -27,6 +27,10 @@ export default function HomePage() {
         <html lang="en" />
         <meta charSet="utf-8" />
         <title>Alex Dring's Portfolio</title>
+        <meta
+          name="description"
+          content="Alex Dring - a full-stack web developer based in Bristol."
+        />
       </Helmet>
       <GlobalStyles />
       <SkipNavLink />
