@@ -1,6 +1,6 @@
 ---
 title: "Spicy Orange Database"
-order: 1
+order: 2
 image: "./spicy-orange-db.png"
 skills: 
   - React

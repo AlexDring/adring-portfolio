@@ -76,7 +76,7 @@ export default function About() {
             I’ve worked with clients from ideation through to launch. Going
             through their needs and requirements, creating a design in
             Figma/Photoshop and then developing a custom website that's
-            perfectly suited to them.
+            perfectly suited to their needs and requirements.
           </p>
           <p>Some technologies I've been working with recently:</p>
 
@@ -88,7 +88,7 @@ export default function About() {
             <li>Gatsby</li>
             <li>Heroku</li>
             <li>HTML & CSS</li>
-            <li>WordPress</li>
+            <li>Netlify</li>
           </ul>
         </div>
         <div className="image-wrap">
